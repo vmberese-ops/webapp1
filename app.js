@@ -9,6 +9,10 @@ const server = http.createServer((req, res) => {
         urll += 'index.html';
         res.statusCode = 200;
     }
+    else if(req.url == '/contact') {
+        urll += 'contact-us.html';
+        res.statusCode = 200;
+    }
     else if(req.url == '/about') {
         urll += 'about.html';
         res.statusCode = 200;
