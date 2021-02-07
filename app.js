@@ -5,7 +5,7 @@ const server = http.createServer((req, res) => {
     console.log(req.url);
     let urll = './views/';
 
-    if(req.url == '/home') {
+    if(req.url == '/' || req.url == '/home') {
         urll += 'index.html';
         res.statusCode = 200;
     }
