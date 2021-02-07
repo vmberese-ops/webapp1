@@ -4,6 +4,11 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <style>
+        body {
+            background-color: #f9f1c0;
+        }
+    </style>
     </head>
 
     <body>
@@ -24,6 +29,43 @@
             <li><a href="about">About</a></li>
             <li><a href="contact">Contact Us</a></li>
         </ul>
+
+        <div class="row">
+            <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                <input placeholder="" id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+            </div>
+             <div class="row">
+                <div class="input-field col s6">
+                <input placeholder="" id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+            </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <textarea value="" id="message" type="text" class="materialize-textarea"></textarea>
+                <label for="message">Message</label>
+                </div>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+            <!-- <div class="row">
+                <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+                </div>
+            </div> -->
+            </form>
+        </div>
         
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
