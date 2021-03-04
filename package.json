@@ -1,0 +1,33 @@
+{
+  "name": "lesson2",
+  "version": "1.0.0",
+  "description": "This is my first node app created in vscode",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmberese-ops/webapp1.git"
+  },
+  "keywords": [
+    "node-app",
+    "firstnode",
+    "app",
+    "webapp",
+    "express"
+  ],
+  "author": "vincent mark erese",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmberese-ops/webapp1/issues"
+  },
+  "homepage": "https://github.com/vmberese-ops/webapp1#readme",
+  "dependencies": {
+    "crypto-random-string": "^3.3.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "weather-js": "^2.0.0"
+  }
+}
