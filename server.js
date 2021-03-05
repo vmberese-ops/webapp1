@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan')
 const weather = require('weather-js')
+const request = require('request');
 const app = express();
 
 app.set('view engine', 'ejs')
@@ -43,19 +44,25 @@ weather.find({search: 'Davao, PH', degreeType: 'C'}, function(err, result) {
     console.log(err);
 
     app.get('/', function (req, res) {
-      res.render('index', { title: 'Home', weather: 'None' });
+      res.render('index', { title: 'Home', weather: 'Nothing' });
     });
     
   }
   else {
 
     app.get('/', function (req, res) {
-      res.render('index', { title: 'Home', weather: result, dateFormat, weatherLinks});
+      res.render('index', { title: 'Home', weather: result, weatherLinks});
     });
 
   }
 });
 
 app.get('/other', function (req, res) {
-  res.render('other', { title: 'Other' });
+  request('https://api.thecatapi.com/v1/images/search', function (error, response, body) {
+    if (error) {
+        res.render('other', { title: 'Other', body: 'Nothing' });
+    } else {
+        res.render('other', { title: 'Other', body: JSON.parse(body) });
+    }
+  });
 });
