@@ -1,0 +1,59 @@
+<html lang="en">
+<%- include('./partials/header')%>
+<body class="orange lighten-5">
+  <%- include('./partials/navbar') %>
+
+  <div class="row"></div>
+  <div class="row">
+    <div class="col s4"></div>
+    <div class="col">
+      <div class="row"></div>
+      <div class="row"></div>
+      <img class="responsive-img" src="<%= flagLink %>" alt="">
+    </div>
+    <div class="col">
+      <h2 class="header"><%= date %></h2>
+      <h3 class="header"><%= time %></h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s9"></div>
+    <div class="col"><a href="/add-listing" class="waves-effect waves-light btn"><i class="material-icons right">add_box</i>New</a></div>
+  </div>
+  <div class="row">
+    <div class="col s2"></div>
+    <div class="col s8">
+      <table class="highlight">
+        <thead>
+          <tr>
+              <th>#</th>
+              <th>Person Name</th>
+              <th>Birthdate</th>
+              <th>Nationality</th>
+              <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (listings.length > 0) { let i = 1; %>
+            <% listings.forEach(listing => { %>
+              <tr>
+                <td><%= i++; %></td>
+                <td><%= listing.full_name %></td>
+                <td><%= listing.birthdate %></td>
+                <td><%= listing.nationality %></td>
+                <td><a href="/view-listing/<%= listing.id%>">[View]</a></td>
+              </tr>
+            <% }) %>
+          <% } else { %>
+            <tr>
+              <td colspan="5" style="text-align: center; color: red; font-weight: bold; font-style: italic;">No Records</td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <%- include('./partials/footer') %>
+</body>
+</html>

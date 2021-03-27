@@ -1,0 +1,53 @@
+<html lang="en">
+<%- include('./partials/header')%>
+<body class="orange lighten-5">
+    <%- include('./partials/navbar') %>
+    
+    <div class="row"></div>
+
+    <div class="row">
+        <div class="col s4"></div>
+        <div class="col">
+            <img src="123055885_110766264168583_6486711335737817861_o.png" alt="" class="src">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s4"></div>
+        <div class="col s1">
+            <a href=""><img src="facebook.png"></a>
+        </div>
+        <div class="col s1">
+            <a href=""><img src="twitter.png"></a>
+        </div>
+        <div class="col s1">
+            <a href="https://github.com/vmberese-ops"><img src="github.png"></a>
+        </div>
+        <div class="col s1">
+            <a href=""><img src="tik-tok.png"></a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s3"></div>
+        <form action="/listings" method="POST">
+        <div class="input-field col s5">
+            <select class="browser-default" name="location" required>
+              <option value="" disabled selected>Time zone</option>
+              <option value="Asia/Manila">Asia/Manila</option>
+              <option value="Asia/Taipei">Asia/Taipei</option>
+              <option value="Australia/Brisbane">Australia/Brisbane</option>
+              <option value="Australia/Perth">Australia/Perth</option>
+              <option value="America/Toronto">America/Toronto</option>
+            </select>
+          </div>
+          <div class="input-field col">
+              <button href="/listings" class="waves-effect waves-light btn" type="submit">join</button>
+          </div>
+        </form>
+    </div>
+    
+
+    <%- include('./partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+<%- include('./partials/header')%>
+<body class="orange lighten-5">
+  <%- include('./partials/navbar') %>
+
+  <div class="row"></div>
+  <div class="row">
+      <div class="col s7"></div>
+      <div class="col"><img src="<%= flagLink %>" alt="" class="sr" width="100"></div>
+  </div>
+  <div class="row">
+    <div class="col s4"></div>
+    <div class="col s12 m4">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">View Person</span>
+          <input disabled value="<%= listing.full_name %>" id="full_name" type="text" class="validate">
+          <input disabled value="<%= listing.nationality %>" id="nationality" type="text" class="validate">
+          <input disabled value="<%= listing.birthdate %>" id="birthdate" type="text" class="validate">
+        </div>
+        <div class="card-action">
+            <div class="col s10"></div>
+            <a href="/listings" class="waves-effect waves-light btn">Exit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('./partials/footer') %>
+</body>
+</html>
